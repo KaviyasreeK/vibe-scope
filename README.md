@@ -43,16 +43,8 @@ bash
 Copy
 Edit
 pip install -r requirements.txt
-3. Download NLTK Resources
-Open a Python shell and run:
 
-python
-Copy
-Edit
-import nltk  
-nltk.download('wordnet')  
-nltk.download('omw-1.4')
-4. Train the Model
+5. Train the Model
 Ensure social_sentiments.csv is in the root folder.
 Run:
 
@@ -66,21 +58,21 @@ Train a TF-IDF vectorizer and a Logistic Regression classifier
 
 Save the model as sentiment_model.pkl and vectorizer.pkl
 
-5. Run the App
+6. Run the App
 
 bash
 Copy
 Edit
-streamlit run vibe_scope.py
+streamlit run vibe_scope.py or python -m streamlit run vibe_scope.py
 Then go to: http://localhost:8501
 
-6. (Optional) Set Up a Virtual Environment
+7. (Optional) Set Up a Virtual Environment
 
 bash
 Copy
 Edit
 python -m venv venv
-7. Activate the Environment
+8. Activate the Environment
 
 On Windows: venv\Scripts\activate
 
