@@ -166,7 +166,7 @@ def login():
         if st.sidebar.button("Login"):
             if username == "admin" and password == "pass123":
                 st.session_state.logged_in = True
-                st.rerun()
+                st.experimental_rerun()
             else:
                 st.sidebar.error("Invalid credentials")
         return False
@@ -174,27 +174,6 @@ def login():
 
 # --- Main App ---
 def main():
-    # Add background image
-    def set_background(image_file):
-        with open(image_file, "rb") as f:
-            img_data = f.read()
-        b64_encoded = base64.b64encode(img_data).decode()
-        st.markdown(
-            f"""
-            <style>
-            .main {{
-                background-image: url("data:image/png;base64,{b64_encoded}");
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-                min-height: 100vh;
-            }}
-            </style>
-            """,
-            unsafe_allow_html=True
-        )
-    # set_background("image_2895e6.png") # Replace with your image file path
-    set_background("img_emj.png")  # Replace with your image path
 
     st.markdown(
         """
@@ -356,4 +335,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
